@@ -44,7 +44,7 @@ const About = () => {
                                                 magnificent designs.
                                         </h2>
                                         <p className="max-w-96 mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0">
-                                                4 years ago, I started learning programming. Since then, I've done
+                                                4 years ago, I started learning programming. Since then, I have done
                                                 remote work for agencies, consulted for startups, and collaborated on
                                                 digital products for business and consumer use.
                                         </p>
