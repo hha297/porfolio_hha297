@@ -50,12 +50,13 @@ const TimelineComponent = ({ data }) => {
                                         contentStyle={{
                                                 background: '#131424',
                                                 color: '#fff',
-                                                marginTop: '8px',
-                                                marginBottom: '8px',
+                                                maxWidth: '360px',
+                                                width: '280px',
+
+                                                borderRadius: '8px',
                                         }}
-                                        contentArrowStyle={{ borderRight: '8px solid #393A47' }}
                                         date={item.date}
-                                        dateClassName="mx-4"
+                                        dateClassName="mx-16"
                                         iconStyle={{
                                                 background: '#fff',
                                                 color: '#000',

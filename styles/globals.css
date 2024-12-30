@@ -169,6 +169,8 @@
 }
 .container {
         max-width: 1760px;
+        overflow: hidden;
+        position: relative;
 }
 
 @layer base {
