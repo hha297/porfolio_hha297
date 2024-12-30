@@ -16,7 +16,7 @@ const getIcon = (item) => {
         const lowerCaseTitle = item.title.toLowerCase();
         const iconClasses = ' object-contain mx-auto w-12 h-12 sm:w-16 sm:h-16';
         if (lowerCaseTitle.includes('web') && lowerCaseTitle.includes('development')) {
-                return <Image src={webDev} alt="Web Development Icon" className={`${iconClasses}`} fill />;
+                return <Image src={webDev} alt="Web Development Icon" className={`${iconClasses}`} />;
         } else if (lowerCaseTitle.includes('ui/ux') && lowerCaseTitle.includes('design')) {
                 return <Image src={UiUX} alt="UI/UX Design Icon" className={`${iconClasses} !w-12 !h-12`} />;
         } else if (lowerCaseTitle.includes('mobile') && lowerCaseTitle.includes('development')) {
