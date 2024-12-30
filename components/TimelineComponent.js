@@ -16,16 +16,7 @@ const getIcon = (item) => {
         const lowerCaseTitle = item.title.toLowerCase();
         const iconClasses = 'rounded-full object-contain mx-auto w-12 h-12 sm:w-16 sm:h-16';
         if (lowerCaseTitle.includes('web') && lowerCaseTitle.includes('development')) {
-                return (
-                        <Image
-                                src={webDev}
-                                alt="Web Development Icon"
-                                className={iconClasses}
-                                width={48}
-                                height={48}
-                                intrinsic
-                        />
-                );
+                return <Image src={webDev} alt="Web Development Icon" className={iconClasses} />;
         } else if (lowerCaseTitle.includes('ui/ux') && lowerCaseTitle.includes('design')) {
                 return <Image src={UiUX} alt="UI/UX Design Icon" className={iconClasses} />;
         } else if (lowerCaseTitle.includes('mobile') && lowerCaseTitle.includes('development')) {
@@ -55,10 +46,12 @@ const TimelineComponent = ({ data }) => {
                         {data.map((item, index) => (
                                 <VerticalTimelineElement
                                         key={index}
-                                        className="vertical-timeline-element w-full max-w-full"
+                                        className="vertical-timeline-element"
                                         contentStyle={{
                                                 background: '#131424',
                                                 color: '#fff',
+                                                maxWidth: '400px',
+                                                width: '340px',
                                         }}
                                         contentArrowStyle={{ borderRight: '8px solid #393A47' }}
                                         date={item.date}
@@ -66,7 +59,10 @@ const TimelineComponent = ({ data }) => {
                                         iconStyle={{
                                                 background: '#fff',
                                                 color: '#000',
+
                                                 display: 'flex',
+                                                width: '60px',
+                                                height: '60px',
                                                 alignItems: 'center',
                                                 justifyContent: 'center',
                                                 borderRadius: '100%',
