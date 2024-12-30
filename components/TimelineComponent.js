@@ -59,7 +59,8 @@ const TimelineComponent = ({ data }) => {
                                                 color: '#000',
 
                                                 display: 'flex',
-
+                                                width: '60px',
+                                                height: '60px',
                                                 alignItems: 'center',
                                                 justifyContent: 'center',
                                                 borderRadius: '100%',
