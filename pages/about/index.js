@@ -25,7 +25,7 @@ const About = () => {
         const [index, setIndex] = useState(0);
 
         return (
-                <div className="h-full bg-primary/30 py-32 text-center xl:text-left">
+                <div className="h-full bg-primary/30 py-36 text-center xl:text-left">
                         <Circles></Circles>
                         {/* Avatar */}
                         <motion.div
@@ -94,12 +94,8 @@ const About = () => {
                                 </div>
 
                                 {/* Info */}
-                                <motion.div
-                                        variants={fadeIn('left', 0.4)}
-                                        initial="hidden"
-                                        animate="show"
-                                        exit="hidden"
-                                        className="flex flex-col w-full xl:max-w-[48%] h-[480px]"
+                                <div
+                                        className="flex flex-col w-full xl:max-w-[52%] h-full"
                                         style={{ overflow: 'auto' }}
                                 >
                                         <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-16 z-10">
@@ -121,7 +117,7 @@ const About = () => {
                                         <TimelineComponent
                                                 data={index === 0 ? skills : index === 1 ? experiences : education}
                                         />
-                                </motion.div>
+                                </div>
                         </div>
                 </div>
         );
