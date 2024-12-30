@@ -7,45 +7,28 @@ import webDev from '../public/webdev.png';
 import UiUX from '../public/uiux.png';
 import mobileDev from '../public/mobile.png';
 import VscDb from '../public/vscdb.png';
-import EternityDesign from '../public/eternity_design.png';
+import KatchLogo from '../public/katch-logo.png';
 import UITLogo from '../public/uit_logo.png';
 import OAMKLogo from '../public/OAMK_logo.png';
 import { SiReact } from 'react-icons/si';
 
 const getIcon = (item) => {
-        console.log(item.title);
-
         const lowerCaseTitle = item.title.toLowerCase();
+        const iconClasses = 'rounded-full object-contain mx-auto w-12 h-12 sm:w-16 sm:h-16';
         if (lowerCaseTitle.includes('web') && lowerCaseTitle.includes('development')) {
-                return <Image src={webDev} height={100} width={100} alt="webIcon" className=" rounded-full" />;
+                return <Image src={webDev} alt="Web Development Icon" className={iconClasses} />;
         } else if (lowerCaseTitle.includes('ui/ux') && lowerCaseTitle.includes('design')) {
-                return <Image src={UiUX} height={48} width={48} alt="UI/UX Icon" className="mx-auto mt-[8px]" />;
+                return <Image src={UiUX} alt="UI/UX Design Icon" className={iconClasses} />;
         } else if (lowerCaseTitle.includes('mobile') && lowerCaseTitle.includes('development')) {
-                return <Image src={mobileDev} height={48} width={48} alt="Mobile Icon" className="mx-auto mt-[4px]" />;
+                return <Image src={mobileDev} alt="Mobile Development Icon" className={iconClasses} />;
         } else if (lowerCaseTitle.includes('version control') && lowerCaseTitle.includes('database')) {
-                return <Image src={VscDb} height={52} width={52} alt="Version Control" className="mx-auto mt-[4px]" />;
+                return <Image src={VscDb} alt="Version Control Icon" className={iconClasses} />;
         } else if (lowerCaseTitle.includes('internship')) {
-                return (
-                        <Image
-                                src={EternityDesign}
-                                height={60}
-                                width={60}
-                                alt="Eternity Design"
-                                className="mx-auto rounded-full"
-                        />
-                );
+                return <Image src={KatchLogo} alt="Internship Icon" className={iconClasses} />;
         } else if (lowerCaseTitle.includes('information system')) {
-                return (
-                        <Image
-                                src={UITLogo}
-                                height={52}
-                                width={52}
-                                alt="Version Control"
-                                className="mx-auto mt-[8px]"
-                        />
-                );
+                return <Image src={UITLogo} alt="Information System Icon" className={iconClasses} />;
         } else {
-                return <Image src={OAMKLogo} height={56} width={56} alt="Version Control" className="mx-auto" />;
+                return <Image src={OAMKLogo} alt="Default Icon" className={iconClasses} />;
         }
 };
 
@@ -53,12 +36,13 @@ const TimelineComponent = ({ data }) => {
         if (!data) {
                 return <div>No data available</div>;
         }
+        console.log(data);
 
         if (!Array.isArray(data)) {
                 return <div>Data is not an array</div>;
         }
         return (
-                <VerticalTimeline>
+                <VerticalTimeline animate={true}>
                         {data.map((item, index) => (
                                 <VerticalTimelineElement
                                         key={index}
@@ -70,15 +54,30 @@ const TimelineComponent = ({ data }) => {
                                         contentArrowStyle={{ borderRight: '8px solid #393A47' }}
                                         date={item.date}
                                         dateClassName="mx-4"
-                                        iconStyle={{ background: '#fff', color: '#000' }}
+                                        iconStyle={{
+                                                background: '#fff',
+                                                color: '#000',
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                justifyContent: 'center',
+                                                borderRadius: '100%',
+                                        }}
                                         icon={getIcon(item)}
                                 >
                                         <h3
                                                 className={`vertical-timeline-element-title text-2xl text-accent`}
-                                                style={{ marginBottom: '12px' }}
+                                                style={{ marginBottom: '8px' }}
                                         >
                                                 {item.title}
                                         </h3>
+                                        {item.location && (
+                                                <h3
+                                                        className="vertical-timeline-element-subtitle text-lg text-neutral-400"
+                                                        style={{ marginBottom: '8px' }}
+                                                >
+                                                        {item.location}
+                                                </h3>
+                                        )}
                                         {item.companyName && (
                                                 <h4 className="vertical-timeline-element-subtitle text-xl">
                                                         {item.companyName}
@@ -107,7 +106,7 @@ const TimelineComponent = ({ data }) => {
                                                 <ul className="mt-5 list-disc ml-5 space-y-2">
                                                         {item.points.map((point, pointIndex) => (
                                                                 <li
-                                                                        className="text-white-100 text-[16px] pl-1 tracking-wider"
+                                                                        className="text-white-100 text-[16px] pl-1 tracking-wider text-left"
                                                                         key={pointIndex}
                                                                 >
                                                                         {point}

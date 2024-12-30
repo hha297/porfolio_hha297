@@ -23,7 +23,7 @@ const aboutData = [
 
 const About = () => {
         const [index, setIndex] = useState(0);
-        console.log(index);
+
         return (
                 <div className="h-full bg-primary/30 py-48 text-center xl:text-left">
                         <Circles></Circles>
@@ -39,29 +39,66 @@ const About = () => {
                         </motion.div>
                         <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
                                 <div className="flex-1 flex flex-col justify-center ml-20 relative">
-                                        <h2 className="h2">
+                                        <motion.h2
+                                                variants={fadeIn('right', 0.2)}
+                                                initial="hidden"
+                                                animate="show"
+                                                exit="hidden"
+                                                className="h2"
+                                        >
                                                 Captivating <span className="text-accent">stories</span> birth
                                                 magnificent designs.
-                                        </h2>
-                                        <p className="max-w-96 mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0">
+                                        </motion.h2>
+                                        <motion.p
+                                                variants={fadeIn('right', 0.4)}
+                                                initial="hidden"
+                                                animate="show"
+                                                exit="hidden"
+                                                className="max-w-96 mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
+                                        >
                                                 4 years ago, I started learning programming. Since then, I have done
                                                 remote work for agencies, consulted for startups, and collaborated on
                                                 digital products for business and consumer use.
-                                        </p>
+                                        </motion.p>
+
                                         {/* Counter */}
-                                        <div className="flex-1 relative after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0 ">
-                                                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
+                                        <motion.div
+                                                variants={fadeIn('right', 0.6)}
+                                                initial="hidden"
+                                                animate="show"
+                                                exit="hidden"
+                                                className="hidden md:flex md:max-w-xl  xl:max-w-none mx-auto xl:mx-0 mb-12 xl:mb-0"
+                                        >
+                                                <div className="flex flex-1 xl:gap-x-6">
                                                         {/* Experience */}
-                                                        <CountUp start={0} end={2} duration={2} />+
+                                                        <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
+                                                                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
+                                                                        <CountUp start={0} end={2} duration={2} />+
+                                                                </div>
+                                                                <div className="text-sm uppercase tracking-[1px] leading-[1.4] max-w-[100[x]">
+                                                                        Years of experience
+                                                                </div>
+                                                        </div>
+
+                                                        {/* Projects */}
+                                                        <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
+                                                                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
+                                                                        <CountUp start={0} end={20} duration={5} />+
+                                                                </div>
+                                                                <div className="text-sm uppercase tracking-[1px] leading-[1.4] max-w-[100[x]">
+                                                                        Completed freelance projects
+                                                                </div>
+                                                        </div>
                                                 </div>
-                                                <div className="text-xs xl:text-xl uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                                                        Years of experiences
-                                                </div>
-                                        </div>
+                                        </motion.div>
                                 </div>
 
                                 {/* Info */}
-                                <div
+                                <motion.div
+                                        variants={fadeIn('left', 0.4)}
+                                        initial="hidden"
+                                        animate="show"
+                                        exit="hidden"
                                         className="flex flex-col w-full xl:max-w-[52%] h-full"
                                         style={{ overflow: 'auto' }}
                                 >
@@ -84,7 +121,7 @@ const About = () => {
                                         <TimelineComponent
                                                 data={index === 0 ? skills : index === 1 ? experiences : education}
                                         />
-                                </div>
+                                </motion.div>
                         </div>
                 </div>
         );

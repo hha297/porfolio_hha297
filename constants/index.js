@@ -19,12 +19,12 @@ const skills = [
                 icons: [
                         { icon: <FaHtml5 />, label: 'HTML5' },
                         { icon: <FaCss3 />, label: 'CSS3' },
+                        { icon: <SiTailwindcss />, label: 'TailwindCSS' },
                         { icon: <FaJs />, label: 'JavaScript' },
-                        { icon: <FaReact />, label: 'ReactJS' },
-                        { icon: <FaNodeJs />, label: 'Node.js' },
                         { icon: <SiTypescript />, label: 'TypeScript' },
+                        { icon: <FaReact />, label: 'React.js' },
+                        { icon: <FaNodeJs />, label: 'Node.js' },
                         { icon: <SiNextdotjs />, label: 'Next.js' },
-                        { icon: <SiTailwindcss />, label: 'Tailwind CSS' },
                 ],
         },
         {
@@ -57,22 +57,14 @@ const skills = [
 
 const experiences = [
         {
-                title: 'Internship - Products Designer',
-                companyName: 'Eternity Design',
-                date: 'May 2021 -  September 2021',
-                points: [
-                        'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-                        'Implementing responsive design and ensuring cross-browser compatibility.',
-                ],
-        },
-        {
-                title: 'Internship - Front-End Web Developer',
-                companyName: 'Eternity Design',
-                date: 'March 2022 - July 2022',
+                title: 'Internship - Full Stack Web Developer',
+                companyName: 'Katch Oy',
+                location: 'Espoo, Finland',
+                date: 'September 2024 - Present',
                 points: [
                         'Developing and maintaining web applications using React.js and other related technologies.',
-                        'Collaborated with senior designers to conduct user research, including surveys and interviews, to gather insights into user behaviors and preferences.',
-                        'Participating in code reviews and providing constructive feedback to other developers.',
+                        'Collaborated with other designers to conduct user research, including surveys and interviews, to gather insights into user behaviors and preferences.',
+                        'Participating in code reviews - Provide and receive constructive feedback on code, helping to identify areas for improvement and ensuring code quality.',
                 ],
         },
 ];
