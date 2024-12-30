@@ -50,7 +50,7 @@ const About = () => {
                                                 magnificent designs.
                                         </motion.h2>
                                         <motion.p
-                                                variants={fadeIn('right', 0.4)}
+                                                variants={fadeIn('right', 0.2)}
                                                 initial="hidden"
                                                 animate="show"
                                                 exit="hidden"
@@ -63,7 +63,7 @@ const About = () => {
 
                                         {/* Counter */}
                                         <motion.div
-                                                variants={fadeIn('right', 0.6)}
+                                                variants={fadeIn('right', 0.2)}
                                                 initial="hidden"
                                                 animate="show"
                                                 exit="hidden"
@@ -73,7 +73,7 @@ const About = () => {
                                                         {/* Experience */}
                                                         <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                                                                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                                                                        <CountUp start={0} end={2} duration={2} />+
+                                                                        <CountUp start={0} end={2} duration={5} />+
                                                                 </div>
                                                                 <div className="text-sm uppercase tracking-[1px] leading-[1.4] max-w-[100[x]">
                                                                         Years of experience
@@ -83,10 +83,10 @@ const About = () => {
                                                         {/* Projects */}
                                                         <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                                                                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                                                                        <CountUp start={0} end={20} duration={5} />+
+                                                                        <CountUp start={0} end={20} duration={10} />+
                                                                 </div>
                                                                 <div className="text-sm uppercase tracking-[1px] leading-[1.4] max-w-[100[x]">
-                                                                        Completed freelance projects
+                                                                        Completed projects
                                                                 </div>
                                                         </div>
                                                 </div>
@@ -94,7 +94,11 @@ const About = () => {
                                 </div>
 
                                 {/* Info */}
-                                <div
+                                <motion.div
+                                        variants={fadeIn('left', 0.4)}
+                                        initial="hidden"
+                                        animate="show"
+                                        exit="hidden"
                                         className="flex flex-col w-full xl:max-w-[52%] h-full"
                                         style={{ overflow: 'auto' }}
                                 >
@@ -117,7 +121,7 @@ const About = () => {
                                         <TimelineComponent
                                                 data={index === 0 ? skills : index === 1 ? experiences : education}
                                         />
-                                </div>
+                                </motion.div>
                         </div>
                 </div>
         );
