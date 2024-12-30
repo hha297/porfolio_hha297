@@ -42,7 +42,7 @@ const TimelineComponent = ({ data }) => {
                 return <div>Data is not an array</div>;
         }
         return (
-                <VerticalTimeline animate={true}>
+                <VerticalTimeline className="vertical-timeline">
                         {data.map((item, index) => (
                                 <VerticalTimelineElement
                                         key={index}
@@ -50,8 +50,6 @@ const TimelineComponent = ({ data }) => {
                                         contentStyle={{
                                                 background: '#131424',
                                                 color: '#fff',
-                                                maxWidth: '400px',
-                                                width: '340px',
                                         }}
                                         contentArrowStyle={{ borderRight: '8px solid #393A47' }}
                                         date={item.date}
@@ -61,8 +59,7 @@ const TimelineComponent = ({ data }) => {
                                                 color: '#000',
 
                                                 display: 'flex',
-                                                width: '60px',
-                                                height: '60px',
+
                                                 alignItems: 'center',
                                                 justifyContent: 'center',
                                                 borderRadius: '100%',
