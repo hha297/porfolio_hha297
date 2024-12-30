@@ -11,6 +11,7 @@ import KatchLogo from '../public/katch-logo.png';
 import UITLogo from '../public/uit_logo.png';
 import OAMKLogo from '../public/OAMK_logo.png';
 import { SiReact } from 'react-icons/si';
+import { RiEarthFill } from 'react-icons/ri';
 
 const getIcon = (item) => {
         const lowerCaseTitle = item.title.toLowerCase();
@@ -51,7 +52,7 @@ const TimelineComponent = ({ data }) => {
                                                 background: '#131424',
                                                 color: '#fff',
                                                 maxWidth: '360px',
-                                                width: '280px',
+                                                width: '300px',
 
                                                 borderRadius: '8px',
                                         }}
@@ -59,15 +60,9 @@ const TimelineComponent = ({ data }) => {
                                         dateClassName="mx-16"
                                         iconStyle={{
                                                 background: '#fff',
-                                                color: '#000',
-                                                display: 'flex',
-
-                                                alignItems: 'center',
-                                                justifyContent: 'center',
-                                                borderRadius: '50%',
-                                                overflow: 'hidden',
+                                                color: '#20183d',
                                         }}
-                                        icon={getIcon(item)}
+                                        icon={<RiEarthFill />}
                                 >
                                         <h3
                                                 className={`vertical-timeline-element-title text-2xl text-accent`}
