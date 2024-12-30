@@ -16,7 +16,16 @@ const getIcon = (item) => {
         const lowerCaseTitle = item.title.toLowerCase();
         const iconClasses = 'rounded-full object-contain mx-auto w-12 h-12 sm:w-16 sm:h-16';
         if (lowerCaseTitle.includes('web') && lowerCaseTitle.includes('development')) {
-                return <Image src={webDev} alt="Web Development Icon" className={iconClasses} />;
+                return (
+                        <Image
+                                src={webDev}
+                                alt="Web Development Icon"
+                                className={iconClasses}
+                                width={48}
+                                height={48}
+                                intrinsic
+                        />
+                );
         } else if (lowerCaseTitle.includes('ui/ux') && lowerCaseTitle.includes('design')) {
                 return <Image src={UiUX} alt="UI/UX Design Icon" className={iconClasses} />;
         } else if (lowerCaseTitle.includes('mobile') && lowerCaseTitle.includes('development')) {
@@ -46,7 +55,7 @@ const TimelineComponent = ({ data }) => {
                         {data.map((item, index) => (
                                 <VerticalTimelineElement
                                         key={index}
-                                        className="vertical-timeline-element"
+                                        className="vertical-timeline-element w-full max-w-full"
                                         contentStyle={{
                                                 background: '#131424',
                                                 color: '#fff',
