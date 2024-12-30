@@ -3,15 +3,15 @@ import { motion } from 'framer-motion';
 const transitionVariants = {
         initial: {
                 x: '100%',
-                scaleX: 1,
+                width: '100%',
         },
         animate: {
                 x: '0%',
-                scaleX: 0,
+                width: '0%',
         },
         exit: {
                 x: ['0%', '100%'],
-                scaleX: [0, 1],
+                width: ['0%', '100%'],
         },
 };
 
