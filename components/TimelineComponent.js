@@ -14,21 +14,21 @@ import { SiReact } from 'react-icons/si';
 
 const getIcon = (item) => {
         const lowerCaseTitle = item.title.toLowerCase();
-        const iconClasses = 'rounded-full object-contain mx-auto w-12 h-12 sm:w-16 sm:h-16';
+        const iconClasses = ' object-contain mx-auto w-12 h-12 sm:w-16 sm:h-16';
         if (lowerCaseTitle.includes('web') && lowerCaseTitle.includes('development')) {
-                return <Image src={webDev} alt="Web Development Icon" className={iconClasses} />;
+                return <Image src={webDev} alt="Web Development Icon" className={`${iconClasses}`} fill />;
         } else if (lowerCaseTitle.includes('ui/ux') && lowerCaseTitle.includes('design')) {
-                return <Image src={UiUX} alt="UI/UX Design Icon" className={iconClasses} />;
+                return <Image src={UiUX} alt="UI/UX Design Icon" className={`${iconClasses} !w-12 !h-12`} />;
         } else if (lowerCaseTitle.includes('mobile') && lowerCaseTitle.includes('development')) {
-                return <Image src={mobileDev} alt="Mobile Development Icon" className={iconClasses} />;
+                return <Image src={mobileDev} alt="Mobile Development Icon" className={`${iconClasses} !w-12 !h-12`} />;
         } else if (lowerCaseTitle.includes('version control') && lowerCaseTitle.includes('database')) {
-                return <Image src={VscDb} alt="Version Control Icon" className={iconClasses} />;
+                return <Image src={VscDb} alt="Version Control Icon" className={`${iconClasses} !w-12 !h-12`} />;
         } else if (lowerCaseTitle.includes('internship')) {
-                return <Image src={KatchLogo} alt="Internship Icon" className={iconClasses} />;
+                return <Image src={KatchLogo} alt="Internship Icon" className={`${iconClasses}`} />;
         } else if (lowerCaseTitle.includes('information system')) {
-                return <Image src={UITLogo} alt="Information System Icon" className={iconClasses} />;
+                return <Image src={UITLogo} alt="Information System Icon" className={`${iconClasses}`} />;
         } else {
-                return <Image src={OAMKLogo} alt="Default Icon" className={iconClasses} />;
+                return <Image src={OAMKLogo} alt="Default Icon" className={`${iconClasses}`} />;
         }
 };
 
@@ -64,7 +64,8 @@ const TimelineComponent = ({ data }) => {
 
                                                 alignItems: 'center',
                                                 justifyContent: 'center',
-                                                borderRadius: '100%',
+                                                borderRadius: '50%',
+                                                overflow: 'hidden',
                                         }}
                                         icon={getIcon(item)}
                                 >

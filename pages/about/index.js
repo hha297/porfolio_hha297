@@ -25,7 +25,7 @@ const About = () => {
         const [index, setIndex] = useState(0);
 
         return (
-                <div className="h-full bg-primary/30 py-36 text-center xl:text-left">
+                <div className="h-full bg-primary/30 pt-48 py-24 md:py-36 text-center xl:text-left">
                         <Circles></Circles>
                         {/* Avatar */}
                         <motion.div
@@ -37,8 +37,8 @@ const About = () => {
                         >
                                 <Avatar />
                         </motion.div>
-                        <div className="container w-3/4 mx-auto h-full flex-1 flex flex-col items-center xl:flex-row gap-x-6">
-                                <div className=" flex flex-col justify-center">
+                        <div className="container w-full md:w-3/4 mx-auto h-full flex-1 flex flex-col items-center xl:flex-row gap-x-6">
+                                <div className=" hidden md:flex  flex-col justify-center">
                                         <motion.h2
                                                 variants={fadeIn('right', 0.2)}
                                                 initial="hidden"
