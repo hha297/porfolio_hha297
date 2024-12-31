@@ -21,11 +21,12 @@
                 "react-icons": "^4.8.0",
                 "react-tsparticles": "^2.9.3",
                 "react-vertical-timeline-component": "^3.6.0",
-                "swiper": "^9.4.0",
+                "swiper": "^9.4.1",
                 "tailwind-scrollbar": "^3.0.4",
                 "tsparticles": "^2.9.3"
         },
         "devDependencies": {
+                "@types/swiper": "^6.0.0",
                 "autoprefixer": "^10.4.14",
                 "eslint": "8.41.0",
                 "eslint-config-next": "13.4.3",

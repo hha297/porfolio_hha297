@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react/jsx-key */
 
 import Avatar from '../../components/Avatar';
@@ -8,6 +9,8 @@ import { fadeIn } from '../../variants';
 import TimelineComponent from '../../components/TimelineComponent';
 import { skills, experiences, education } from '../../constants';
 import CountUp from 'react-countup';
+import Link from 'next/link';
+import { FaArrowCircleRight } from 'react-icons/fa';
 //  data
 const aboutData = [
         {
@@ -25,7 +28,7 @@ const About = () => {
         const [index, setIndex] = useState(0);
 
         return (
-                <div className="h-full bg-primary/30 pt-48 py-24 md:py-36 text-center xl:text-left">
+                <div className="h-full bg-primary/30 py-24 md:py-36 text-center xl:text-left">
                         <Circles></Circles>
                         {/* Avatar */}
                         <motion.div
@@ -37,8 +40,8 @@ const About = () => {
                         >
                                 <Avatar />
                         </motion.div>
-                        <div className="container w-full md:w-3/4 mx-auto h-full flex-1 flex flex-col items-center xl:flex-row gap-x-6">
-                                <div className=" hidden md:flex  flex-col justify-center">
+                        <div className="container w-full md:w-4/5 mx-auto h-full flex-1 flex flex-col items-center xl:flex-row gap-x-6">
+                                <div className=" hidden md:flex flex-col justify-center">
                                         <motion.h2
                                                 variants={fadeIn('right', 0.2)}
                                                 initial="hidden"
@@ -49,17 +52,29 @@ const About = () => {
                                                 Captivating <span className="text-accent">stories</span> birth
                                                 magnificent designs.
                                         </motion.h2>
-                                        <motion.p
+                                        <motion.div
                                                 variants={fadeIn('right', 0.2)}
                                                 initial="hidden"
                                                 animate="show"
                                                 exit="hidden"
-                                                className="max-w-96 mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
+                                                className="max-w-xl text-lg mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
                                         >
-                                                4 years ago, I started learning programming. Since then, I have done
-                                                remote work for agencies, consulted for startups, and collaborated on
-                                                digital products for business and consumer use.
-                                        </motion.p>
+                                                I'm a software developer with experience in Javascript and TypeScript
+                                                and also getting acquainted with Kotlin, and get used to in frameworks
+                                                like React.js, Node.js, TailwindCSS. I'm a quick learner and willing to
+                                                collaborate closely with clients to create efficient, scalable, and
+                                                user-friendly solutions that solve problems.
+                                                <br />
+                                                <Link
+                                                        href={'/contact'}
+                                                        className="text-accent flex flex-row text-center items-center gap-x-2 mt-4 group"
+                                                >
+                                                        <FaArrowCircleRight className="transition-all duration-300 transform group-hover:translate-x-2" />
+                                                        <motion.div className="text-lg font-semibold text-accent transition-all duration-300 transform group-hover:translate-x-2">
+                                                                Let's work together to bring your ideas to real life.
+                                                        </motion.div>
+                                                </Link>
+                                        </motion.div>
 
                                         {/* Counter */}
                                         <motion.div
@@ -99,7 +114,7 @@ const About = () => {
                                         initial="hidden"
                                         animate="show"
                                         exit="hidden"
-                                        className="flex flex-col w-full xl:max-w-[60%] h-full"
+                                        className="flex flex-col w-full xl:max-w-[50%] h-full"
                                         style={{ overflow: 'auto' }}
                                 >
                                         <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-16 z-10">
@@ -111,7 +126,7 @@ const About = () => {
                                                                         className={`${
                                                                                 index === itemIndex &&
                                                                                 'text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-all'
-                                                                        } cursor-pointer relative capitalize xl:text-xl text-lg after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
+                                                                        }  hover:text-accent cursor-pointer relative capitalize xl:text-xl text-lg after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
                                                                 >
                                                                         <div className="">{item.title}</div>
                                                                 </div>

@@ -50,8 +50,8 @@ const TimelineComponent = ({ data }) => {
                                                 {index !== data.length - 1 && <TimelineConnector />}
                                         </TimelineSeparator>
 
-                                        <TimelineContent className="bg-gray-800 text-white p-4 rounded-lg max-w-[360px] w-full">
-                                                <h3 className="text-xl text-accent mb-2">{item.title}</h3>
+                                        <TimelineContent className="bg-gray-800  text-white p-4 rounded-lg max-w-[100%] w-full">
+                                                <h3 className="text-xl text-accent mb-2 text-center">{item.title}</h3>
 
                                                 {/* Location */}
                                                 {item.location && (

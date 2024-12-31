@@ -7,7 +7,7 @@ import { useRouter } from 'next/router';
 export const navData = [
         { name: 'Home', path: '/', icon: <HiHome /> },
         { name: 'About', path: '/about', icon: <HiUser /> },
-        { name: 'Services', path: '/services', icon: <HiRectangleGroup /> },
+
         { name: 'Works', path: '/work', icon: <HiViewColumns /> },
         {
                 name: 'Contact',
