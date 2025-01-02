@@ -14,10 +14,9 @@ This project is a personal portfolio website designed to showcase my skills, exp
 
 ## Tech Stack
 
-- **Frontend**: [HTML, CSS, JavaScript, React.js/Next.js]
-- **Backend**: [Node.js, Express, Firebase] (if applicable)
-- **Styling**: [Tailwind CSS, Styled-Components]
-- **Hosting**: [Vercel, Netlify, or GitHub Pages]
+- **Frontend**: [React.js/Next.js]
+- **Styling**: [Tailwind CSS]
+- **Hosting**: [Vercel]
 
 ## Purpose and Vision
 
