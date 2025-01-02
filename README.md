@@ -58,13 +58,13 @@ To start the development server, use the following command based on your package
 #### For npm
 
 ```bash
-npm start
+npm run dev
 ```
 
 #### For yarn
 
 ```bash
-yarn start
+yarn dev
 ```
 
 ### Open Browser
