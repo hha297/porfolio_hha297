@@ -4,6 +4,7 @@ import Layout from '../components/Layout';
 import { useRouter } from 'next/router';
 import { AnimatePresence, motion } from 'framer-motion';
 import Head from 'next/head';
+import { Toaster } from 'react-hot-toast';
 function MyApp({ Component, pageProps }) {
         const router = useRouter();
         return (
@@ -16,6 +17,7 @@ function MyApp({ Component, pageProps }) {
                         <AnimatePresence mode="wait">
                                 <motion.div key={router.route} className="h-full">
                                         <Transition />
+                                        <Toaster />
                                         <Component {...pageProps} />
                                 </motion.div>
                         </AnimatePresence>

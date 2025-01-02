@@ -60,10 +60,10 @@ const About = () => {
                                                 className="max-w-xl text-lg mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
                                         >
                                                 I'm a software developer with experience in Javascript and TypeScript
-                                                and also getting acquainted with Kotlin, and get used to in frameworks
-                                                like React.js, Node.js, TailwindCSS. I'm a quick learner and willing to
-                                                collaborate closely with clients to create efficient, scalable, and
-                                                user-friendly solutions that solve problems.
+                                                and get used to in frameworks like React, React Native, NodeJS, Tailwind
+                                                CSS. I'm a quick learner and willing to collaborate closely with clients
+                                                to create efficient, scalable, and user-friendly solutions that solve
+                                                problems.
                                                 <br />
                                                 <Link
                                                         href={'/contact'}
@@ -82,9 +82,9 @@ const About = () => {
                                                 initial="hidden"
                                                 animate="show"
                                                 exit="hidden"
-                                                className="hidden md:flex md:max-w-xl  xl:max-w-none mx-auto xl:mx-0 mb-12 xl:mb-0"
+                                                className="hidden md:flex md:max-w-xl xl:max-w-none mx-auto xl:mx-0 mb-12 xl:mb-0"
                                         >
-                                                <div className="flex flex-1 xl:gap-x-6">
+                                                <div className="flex flex-1 gap-x-8">
                                                         {/* Experience */}
                                                         <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                                                                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">

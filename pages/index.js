@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Image from 'next/image';
 import ParticlesContainer from '../components/ParticlesContainer';
 import ProjectsBtn from '../components/ProjectsBtn';
@@ -17,21 +18,21 @@ const Home = () => {
                                                 exit="hidden"
                                                 className="h1 z-10"
                                         >
-                                                Transforming Idea <br /> Into{' '}
-                                                <span className="text-accent">Digital Reality</span>
+                                                Let's Transform Your Idea <br /> Into{' '}
+                                                <span className="text-accent">Digital Reality.</span>
                                         </motion.h1>
                                         <motion.div
                                                 variants={fadeIn('down', 0.3)}
                                                 initial="hidden"
                                                 animate="show"
                                                 exit="hidden"
-                                                className="max-w-sm z-10 xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
+                                                className="max-w-3xl z-10 xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16 text-lg"
                                         >
                                                 4 years ago, I started learning programming. Since then, I have done
                                                 remote work for agencies, consulted for startups, and collaborated on
                                                 digital products for business and consumer use.
                                                 <br />
-                                                <div className="hidden md:block">
+                                                <div className="mt-4">
                                                         My journey has allowed me to work with diverse teams, tackle
                                                         complex challenges, and continuously expand my skill set. I am
                                                         passionate about creating impactful solutions and always eager
