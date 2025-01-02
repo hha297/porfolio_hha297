@@ -33,8 +33,8 @@ This project is a personal portfolio website designed to showcase my skills, exp
 ### Clone Repository
 
 ```bash
-git clone [https://github.com/hha297/portfolio.git](https://github.com/hha297/porfolio_hha297.git)
-cd portfolio
+git clone https://github.com/hha297/porfolio_hha297
+cd portfolio_hha297
 ```
 
 ### Install Dependencies
